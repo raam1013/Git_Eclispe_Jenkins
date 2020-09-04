@@ -51,6 +51,7 @@ public class Auto_Suggest_Text_Box {
 	        }
         Thread.sleep(10000);
         driver.close();
+        Reporter.log("Driver closed");
 
 }
 }
