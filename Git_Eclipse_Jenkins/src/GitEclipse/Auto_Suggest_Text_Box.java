@@ -2,6 +2,7 @@ package GitEclipse;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.testng.Reporter;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -19,6 +20,7 @@ public class Auto_Suggest_Text_Box {
 	    driver.manage().window().maximize();
 	    driver.get("https://google.co.in");
 	    Thread.sleep(4000);
+	    Reporter.log("Chrome Browser Launched");
 
 	    //1st Process
 		/*driver.findElement(By.name("q")).click();
@@ -31,11 +33,13 @@ public class Auto_Suggest_Text_Box {
 		driver.findElement(By.name("q")).clear();
 		Thread.sleep(5000);*/
 		driver.findElement(By.name("q")).sendKeys("testing");
+		Reporter.log("Enter the some value in Google Search");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//2nd Process
 		List<WebElement> text = driver.findElements(By.cssSelector("ul[class='erkvQe'] "));
         for(WebElement element : text) {
         System.out.println(element.getText());
+        Reporter.log("Printed All Links");
         if(element.getText().contains("testing jobs"))
         element.click();
         Thread.sleep(3000);
