@@ -18,9 +18,10 @@ public class Auto_Suggest_Text_Box {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Downloads/chromedriver.exe");
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
+	    Reporter.log("Chrome Browser Launched");
 	    driver.get("https://google.co.in");
 	    Thread.sleep(4000);
-	    Reporter.log("Chrome Browser Launched");
+	    Reporter.log("Application Launched");
 
 	    //1st Process
 		/*driver.findElement(By.name("q")).click();
