@@ -15,7 +15,7 @@ public class Auto_Suggest_Text_Box {
 	public static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Downloads/chromedriver_win32 (1)/chromedriver.exe");
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	    Reporter.log("Chrome Browser Launched");
@@ -33,7 +33,7 @@ public class Auto_Suggest_Text_Box {
 		Thread.sleep(5000);
 		driver.findElement(By.name("q")).clear();
 		Thread.sleep(5000);*/
-		driver.findElement(By.name("q")).sendKeys("testing");
+		driver.findElement(By.name("q")).sendKeys("Selenium");
 		Reporter.log("Enter the some value in Google Search");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//2nd Process
@@ -41,7 +41,7 @@ public class Auto_Suggest_Text_Box {
         for(WebElement element : text) {
         System.out.println(element.getText());
         Reporter.log("Printed All Links");
-        if(element.getText().contains("testing jobs"))
+        if(element.getText().contains("Selenium jobs"))
         element.click();
         Thread.sleep(4000);
         element.click();
