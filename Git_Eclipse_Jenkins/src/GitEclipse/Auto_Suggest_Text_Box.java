@@ -18,6 +18,7 @@ public class Auto_Suggest_Text_Box {
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	    driver.get("https://google.co.in");
+	    Thread.sleep(4000);
 
 	    //1st Process
 		/*driver.findElement(By.name("q")).click();
