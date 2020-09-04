@@ -42,7 +42,7 @@ public class Auto_Suggest_Text_Box {
         Reporter.log("Printed All Links");
         if(element.getText().contains("testing jobs"))
         element.click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         element.click();
         System.out.println("------------------------------");
         System.out.println("Crossed the Click");
